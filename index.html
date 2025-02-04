@@ -149,8 +149,8 @@
         function generateColorVariations(baseHue) {
             const variations = [];
             const hueVariation = 15; // ±15 degrees for similar colors
-            const satVariation = 15; // ±15% saturation
-            const lightVariation = 10; // ±10% lightness
+            const satVariation = 15; 
+            const lightVariation = 10; 
             
             // Generate 5 similar colors
             for (let i = 0; i < 5; i++) {
@@ -161,7 +161,7 @@
                 variations.push(hslToHex(
                     (h + 360) % 360, // Keep hue in valid range
                     Math.min(Math.max(s, 15), 85), // Clamp saturation
-                    Math.min(Math.max(l, 30), 70)  // Clamp lightness
+                    Math.min(Math.max(l, 30), 70) 
                 ));
             }
             return variations;
@@ -197,7 +197,7 @@
             });
         }
 
-        // (Keep handleColorGuess and other functions the same as previous version)
+        //  handleColorGuess and other functions 
         function handleColorGuess(guessedColor) {
             const statusElement = document.getElementById('gameStatus');
             
